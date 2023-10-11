@@ -39,15 +39,23 @@ function Intro() {
 // displays list of skills
 function SkillList() {
   return (
-    <div>
-      <Skill />
+    <div className="skill-list">
+      <Skill skill="React" emoji="🤯" color="cyan" />
+      <Skill skill="JavaScript" emoji="🤩" color="yellow" />
+      <Skill skill="HTML & CSS" emoji="😌" color="orange" />
+      <Skill skill="NodeJS" emoji="😎" color="green" />
     </div>
   );
 }
 
 // list your skill set
-function Skill() {
-  return <div className="skill">React 🤯</div>;
+function Skill(props) {
+  return (
+    <div className="skill" style={{ backgroundColor: props.color }}>
+      <span>{props.skill}</span>
+      <span>{props.emoji}</span>
+    </div>
+  );
 }
 
 export default App;
