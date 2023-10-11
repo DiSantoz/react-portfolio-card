@@ -1,4 +1,5 @@
 import "./App.css";
+import me from "./disantoz.png";
 
 function App() {
   return (
@@ -15,10 +16,38 @@ function App() {
   );
 }
 
-function Avatar() {}
+// contains image
+function Avatar() {
+  return <img className="avatar" src={me} alt=" DiSantoz" />;
+}
 
-function Intro() {}
+// short introduction
+function Intro() {
+  return (
+    <div>
+      <h1>DiSantoz</h1>
+      <p>
+        Full-stack web developer with experience in JavaScript and MERN stack. I
+        love constanly learning about the world development. When I'm not coding
+        I enjoy playing video games, going out with friends and reading. Let's
+        connect!
+      </p>
+    </div>
+  );
+}
 
-function SkillList() {}
+// displays list of skills
+function SkillList() {
+  return (
+    <div>
+      <Skill />
+    </div>
+  );
+}
+
+// list your skill set
+function Skill() {
+  return <div className="skill">React 🤯</div>;
+}
 
 export default App;
